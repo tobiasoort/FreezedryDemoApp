@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:freezedry": "npm build && ngc -p tsconfig.freezedry.json && webpack --progress --config webpack.freezedry.config.js",
+    "build:freezedry": "ng build && ngc -p tsconfig.freezedry.json && webpack --progress --config webpack.freezedry.config.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
