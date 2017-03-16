@@ -1,3 +1,4 @@
+import 'zone.js/dist/zone-node';
 import { enableProdMode } from '@angular/core';
 import { renderModuleFactory } from '@angular/platform-server';
 import { AppFreezedryModuleNgFactory } from './aot/src/app/app.freezedry.module.ngfactory';
@@ -24,7 +25,7 @@ const freezedryPaths = [
 const INPUT_TEMPLATE_CONTENT = fs.readFileSync(INPUT_TEMPLATE_PATH).toString(); 
 
 for (let path of freezedryPaths) {
-    renderModuleFactory(AppServerModuleNgFactory, {
+    renderModuleFactory(AppFreezedryModuleNgFactory, {
 		document: INPUT_TEMPLATE_CONTENT,
 		url: path
 	}).then(freezedriedPage => {

@@ -19,7 +19,7 @@
   },
   "angularCompilerOptions": {
    "genDir": "src/aot",
-   "entryModule": "./src/app.freezedry.module#AppServerModule",
+   "entryModule": "./src/app.freezedry.module#AppFreezedryModule",
    "skipMetadataEmit" : false
  }
 }

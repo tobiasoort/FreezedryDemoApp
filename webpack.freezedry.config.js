@@ -230,7 +230,7 @@ module.exports = {
     }),
 
     new AotPlugin({
-      "entryModule": __dirname + "/src/app/app.freezedry.module.ts#AppServerModule",
+      "entryModule": __dirname + "/src/app/app.freezedry.module.ts#AppFreezedryModule",
       "hostReplacementPaths": {
         "environments/environment.ts": "environments/environment.ts"
       },

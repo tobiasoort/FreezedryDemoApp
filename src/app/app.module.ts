@@ -10,7 +10,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({
+            appId: 'demo-app'
+        }),
     FormsModule,
     HttpModule
   ],
