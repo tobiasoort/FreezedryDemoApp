@@ -24,6 +24,10 @@ this outputs a new "freezedried" index.html in the `dist/dry` directory, which y
 
 Freezedry uses the power of Angular Universal to run the app at buildtime, and then renders the application DOM into the original `index.html` location, generating a new HTML file that runs without Angular loaded.
 
+## Configuring
+
+All the magic for the runtime freezedryer is contained in `/src/freezedry.ts`. The mapping for the app to Angular Universal is handled by `/src/app/app.freezedry.module.ts`.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
