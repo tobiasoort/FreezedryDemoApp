@@ -1,6 +1,28 @@
 # FreezedryDemoApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.2 and upgraded to Angular version 4.0.0-rc.3.
+
+## What is freezedry
+Freezedry is a tool to generate ('freezedry') server-side rendered pages at buildtime, so your server can be a dumb static server again.
+
+> *Freeze-drying* — technically known as lyophilisation, lyophilization, or cryodesiccation—is a dehydration process typically used to preserve a perishable material or make the material more convenient for transport. 
+## Running freezedry
+Make a freezedryable build with
+
+    bash-3.2$ npm run build:freezedry
+
+and then in the dist-folder, run the generated freezedryer:
+
+    bash-3.2$ cd dist/
+    bash-3.2$ node freezedryer.js
+    freezedrying ./index.html with url '/' into ./dry/index.html
+    bash-3.2$
+
+this outputs a new "freezedried" index.html in the `dist/dry` directory, which you can ship instead of the original vanilla index.html.
+
+## How it works
+
+Freezedry uses the power of Angular Universal to run the app at buildtime, and then renders the application DOM into the original `index.html` location, generating a new HTML file that runs without Angular loaded.
 
 ## Development server
 
